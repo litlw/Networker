@@ -5,8 +5,7 @@ Dots d [];  // this is the array that contains where the points are that are bei
 int t = 300; // 
 float c = 30; // the range. If individual points are in this range or radius, then draw a line from point to point
 float weight = 0.6;
-int yesno = 0; // i dont think I need this
-int clearboard = 0; // doesnt currently work
+
 
 void setup() {
  fullScreen(P3D);
@@ -18,7 +17,7 @@ void setup() {
     d[i] = new Dots(0, 0);
   }
   
-  println("Done setup");
+  println("Done setup"); // this is a checkpoint to ensure setup completes.
 
 }
 
@@ -48,7 +47,7 @@ void addToArray() {
   for (int i = 0; i < (d.length - 1); i++) {
     d[i] = d[i+1]; // this updates the array's points to fill up my array. 
   }
-  println("added to array");
+  println("added to array");// this is a checkpoint to ensure the array is updating.
   d[d.length - 1] = new Dots(mouseX, mouseY); 
 }
 
